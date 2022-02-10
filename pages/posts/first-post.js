@@ -2,9 +2,11 @@ import Link from "next/link";
 import Head from "next/head";
 import Script from "next/script";
 
+import Layout from "../../components/layout";
+
 const FirstPost = () => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>First Post</title>
         {/* <script src="https://connect.facebook.net/en_US/sdk.js" /> */}
@@ -22,7 +24,7 @@ const FirstPost = () => {
           <a>Back to home</a>
         </Link>
       </h2>
-    </>
+    </Layout>
   );
 };
 
