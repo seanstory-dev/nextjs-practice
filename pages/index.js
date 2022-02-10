@@ -1,28 +1,17 @@
-import Link from "next/link";
-import Image from "next/image";
 import Head from "next/head";
+import Layout, { siteTitle } from "../components/layout";
+import utilStyles from "../styles/utils.module.scss";
 
 const Home = () => {
   return (
-    <>
+    <Layout home>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{siteTitle}</title>
       </Head>
-      <h1 className="title">
-        Read{" "}
-        <Link href="/posts/first-post">
-          <a>this page</a>
-        </Link>
-      </h1>
-      {/* <img src="/images/background.jpg" alt="background" /> */}
-      <Image
-        src="/images/background.jpg"
-        height={1200}
-        width={1600}
-        alt="background"
-      />
-    </>
+      <section className={utilStyles.headingMd}>
+        <p>Hello, I'm Sean. I'm a software engineer.</p>
+      </section>
+    </Layout>
   );
 };
 export default Home;
